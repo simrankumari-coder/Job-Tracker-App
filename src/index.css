@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+body {
+  @apply bg-teal-950
+}
