@@ -1,7 +1,8 @@
 import React from 'react'
-
+import { useContext } from 'react'
+import { JobContext } from '../context/JobContext'
 const JobCard = ({ job }) => {
-
+    const { editForm, deleteForm } = useContext(JobContext)
     return (
         <div>
             <div>
@@ -10,6 +11,10 @@ const JobCard = ({ job }) => {
                 <span>{job.date}</span>
                 <span>{job.status}</span>
                 <span>{job.notes}</span>
+                <div>
+                    <button onClick={() => editForm()}>Edit</button>
+                    <button onClick={() => deleteForm(job.id)}>Delete</button>
+                </div>
             </div>
         </div>
     )

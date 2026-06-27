@@ -10,15 +10,26 @@ export const JobProvider = ({ children }) => {
         setShowForm(!showForm)
     }
     function addNewForm(jobData) {
-
+        const jobId = { id: Date.now(), ...jobData }
+        setJobs([...jobs, jobId])
     }
-    function editForm() {
-
+    function editForm(jobId, updateData) {
+        let updatedData = jobs.map(job => {
+            if (job.id === jobId) {
+                return { ...job, ...updateData }
+            } else {
+                return job
+            }
+        })
+        setJobs(updateData)
     }
-    function deleteForm() {
-
+    function deleteForm(deleteId) {
+        let deleteJob = jobs.filter(id => job.id !== deleteId)
+        setJobs(deleteJob)
     }
-    function changeFilter() {
+    function changeFilter(newFilter) {
+
+        setFilter(newFilter)
 
     }
     return (

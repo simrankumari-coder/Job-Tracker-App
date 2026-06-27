@@ -1,9 +1,9 @@
 import React from 'react'
 import { useContext } from 'react'
 import { JobContext } from '../context/JobContext'
-
+import JobCard from './JobCard'
 const JobList = () => {
-    const { filter, jobs } = useContext(JobContext)
+    const { filter, jobs, addNewForm } = useContext(JobContext)
     const filteredArray =
         jobs.filter(job => {
             if (filter === "All") {
@@ -17,7 +17,7 @@ const JobList = () => {
         <div>
             <div>
                 {filteredArray.map(job => {
-                    return <JobCard key={ } job={job} />
+                    return <JobCard key={job.id} job={job} />
                 })}
             </div>
         </div>
