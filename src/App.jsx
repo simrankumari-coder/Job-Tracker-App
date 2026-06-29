@@ -12,6 +12,7 @@ function App() {
   return (
     <>
       <JobProvider>
+
         <Header />
         <AddToForm />
         <StatsBar />

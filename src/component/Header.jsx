@@ -6,10 +6,11 @@ const Header = () => {
 
   return (
     <div>
-      <div>
-        <div className="bg-green-200 mx-auto flex justify-start items-start p-3 "> <span className="text-6xl font-bold text-black">Job Tracker</span></div>
-      </div>
-      <div><button onClick={toggleForm}>+ Add Form</button></div>
+
+      <div className="bg-gray-900 mx-auto flex justify-between items-start p-3 w-full ">
+        <span className="ml-2 md:text-6xl text-2xl font-bold text-white">Job Tracker</span>
+
+        <button className="border border-white rounded p-0.5 md:p-2 text-white md:mr-10 md:mt-3.5 text-[18px] font-medium" onClick={toggleForm}>+ Add Form</button> </div>
     </div>
   )
 }

@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
 body {
-  @apply bg-teal-950
+  @apply bg-black
+}
+
+label {
+  @apply flex flex-col justify-start gap-2
+}
+
+label input {
+  @apply bg-gray-700 p-2 rounded-md
 }
